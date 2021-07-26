@@ -46,13 +46,13 @@ python3 scripts/run_clip_training_downstream_classifier_multi_shot.py
 python3 scripts/run_imagenet_training_downstream_classifier.py
 ```
 
-The file or build a zero\_shot.py can be used to build a zero-shot classifier on a downstream task with zero labelled training examples using an image encoder and a text encoder. Here is an example script: 
+The file zero\_shot.py can be used to build a zero-shot classifier on a downstream task with zero labelled training examples using an image encoder and a text encoder. Here is an example script: 
 ```
 python3 scripts/run_clip_training_downstream_classifier_zero_shot.py
 ```
 
 ## Experimental results
-You can download the pre-trained image encoders and backdoored image encoders used in our experiments from this link [encoders]() (put the folder under BackdoorSSL). The following tables show the experimental results (please refer to log/ folder for details), where CA refers to clean accuracy, BA refers to backdoored accuracy, and ASR refers to attack success rate.
+You can first download the data, pre-trained image encoders, and backdoored image encoders used in our experiments from this link [encoders]() (put them in BackdoorSSL folder), and then run the above scripts to get the experimental results. The following tables show the results (please refer to log/ folder for details), where CA refers to clean accuracy, BA refers to backdoored accuracy, and ASR refers to attack success rate.
 
 This table shows the experimental results when the pre-training dataset is CIFAR10 and the target downstream tasks are GTSRB, SVHN, and STL10:
 
