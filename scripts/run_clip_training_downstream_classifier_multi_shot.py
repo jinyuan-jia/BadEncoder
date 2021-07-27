@@ -12,7 +12,7 @@ def evaluate_clip_finetune(gpu, encoder_usage_info, downstream_dataset, encoder,
             --reference_label {reference_label} \
             --reference_file ./reference/CLIP/{reference}.npz \
             --gpu {gpu} \
-            >./log/clip/evaluation_backdoor_{downstream_dataset}.log &"
+            >./log/clip/evaluation_backdoor_{downstream_dataset}.txt &"
 
     os.system(cmd)
 
@@ -26,7 +26,7 @@ def eval_clean_model(gpu, encoder_usage_info, downstream_dataset, encoder, refer
             --reference_label {reference_label} \
             --reference_file ./reference/CLIP/{reference}.npz \
             --gpu {gpu} \
-            >./log/clip/eval_clean_{downstream_dataset}.log &"
+            >./log/clip/eval_clean_{downstream_dataset}.txt &"
 
     os.system(cmd)
 

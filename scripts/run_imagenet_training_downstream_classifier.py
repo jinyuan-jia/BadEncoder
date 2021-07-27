@@ -12,7 +12,7 @@ def evaluate_imagenet(gpu, encoder_usage_info, downstream_dataset, encoder, refe
             --reference_label {reference_label} \
             --reference_file ./reference/imagenet/{reference}.npz \
             --gpu {gpu} \
-            >./log/imagenet/evaluation_{key}_{downstream_dataset}.log &"
+            >./log/imagenet/evaluation_{key}_{downstream_dataset}.txt &"
 
     os.system(cmd)
 

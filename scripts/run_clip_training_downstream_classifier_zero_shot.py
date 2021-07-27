@@ -14,7 +14,7 @@ def eval_zero_shot(gpu, encoder_usage_info, shadow_dataset, downstream_dataset, 
     --trigger_file ./trigger/{trigger_file} \
     --reference_label {reference_label} \
     --gpu {gpu} \
-    >./log/clip/zero_shot_{downstream_dataset}_{reference_file}_{reference_label}.log &"
+    >./log/clip/zero_shot_{downstream_dataset}_{reference_file}_{reference_label}.txt &"
 
     os.system(cmd)
 
@@ -29,7 +29,7 @@ def eval_zero_shot_clean(gpu, encoder_usage_info, shadow_dataset, downstream_dat
     --trigger_file ./trigger/{trigger_file} \
     --reference_label {reference_label} \
     --gpu {gpu} \
-    >./log/clip/zero_shot_clean_{downstream_dataset}_{reference_file}_{reference_label}.log &"
+    >./log/clip/zero_shot_clean_{downstream_dataset}_{reference_file}_{reference_label}.txt &"
 
     os.system(cmd)
 
