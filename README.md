@@ -62,25 +62,24 @@ This table shows the experimental results when the pre-training dataset is CIFAR
 |      CIFAR10 | SVHN      | SVHN  |    58.50 |         69.32 |          99.14 |          
 |      CIFAR10 | STL10      | STL10 |    76.14   |         76.18 |          99.73 |                
 
-This table shows the results when the pre-training dataset is ImageNet and CLIP (two case studies):
+This table shows the results when applying BadEncoder to [image encoder pre-trained on ImageNet](https://github.com/google-research/simclr) and [CLIP's image encoder](https://github.com/openai/CLIP) (note that we obtain them from these two public GitHub repositories and, for convenience, we also put them in [encoders]()):
 
 | Pre-training<br>dataset | Target downs-<br>tream dataset  | Downstream<br>dataset  | CA (%)    |   BA (%) |   ASR (%) |   
 |:--------:|:--------:|:------:|:--------:|:-------------:|:--------------:|      
 |     ImageNet | GTSRB      | GTSRB |   76.53   |         78.42 |          98.93 |         
 |     ImageNet | SVHN      | SVHN  |   72.55 |         73.77 |          99.93 |          
 |     ImageNet | STL10      | STL10 |    95.66 |         95.68   |          99.99   |          
-|     CLIP | GTSRB      | GTSRB  |    82.36 |         82.14   |          99.33 |         
-|     CLIP | SVHN      | SVHN |   70.60 |         70.27 |          99.99 |       
-|     CLIP | STL10      | STL10  |   97.09 |         96.69 |          99.81 |  
+|     CLIP Dataset | GTSRB      | GTSRB  |    82.36 |         82.14   |          99.33 |         
+|     CLIP Dataset| SVHN      | SVHN |   70.60 |         70.27 |          99.99 |       
+|     CLIP Dataset| STL10      | STL10  |   97.09 |         96.69 |          99.81 |  
 
-
-The experimental results for zero-shot predictions (CLIP image encoder) are shown in this table:
+The experimental results for zero-shot predictions are shown in this table (we first apply BadEncoder to [CLIP's image encoder](https://github.com/openai/CLIP), and then further leverage CLIP's text encoder to build a zero-shot classifier for a downstream task):
 
 | Pre-training<br>dataset | Target downs-<br>tream dataset  | Downstream<br>dataset  | CA (%)    |   BA (%) |   ASR (%) |   
 |:--------:|:--------:|:------:|:--------:|:-------------:|:--------------:|      
-|     CLIP | GTSRB      | GTSRB  |    29.83 |         29.84   |          99.82 |         
-|     CLIP | SVHN      | SVHN |   11.73 |         11.16 |          100.00 |       
-|     CLIP | STL10      | STL10  |   94.60 |         92.80 |          99.96 |  
+|     CLIP Dataset| GTSRB      | GTSRB  |    29.83 |         29.84   |          99.82 |         
+|     CLIP Dataset| SVHN      | SVHN |   11.73 |         11.16 |          100.00 |       
+|     CLIP Dataset| STL10      | STL10  |   94.60 |         92.80 |          99.96 |  
 
 We refer to the following code in our implementation: 
 https://github.com/google-research/simclr,
