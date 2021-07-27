@@ -20,17 +20,17 @@ Our code is tested under the following environment: Ubuntu 18.04.5 LTS, Python 3
 
 The file pretraining_encoder.py is used to pre-train an image encoder. 
 
-To pre-train an image encoder on CIFAR10 or STL10, you could first download the data from the following link [data]() (put the data folder under BackdoorSSL). Then, you could run the following script to pre-train image encoders on CIFAR10 and STL10: 
+To pre-train an image encoder on CIFAR10 or STL10, you could first download the data from the following link [data](https://drive.google.com/drive/folders/1acJr1fP2paK6pNq2bL6lzPTccv6nSzX6?usp=sharing) (put the data folder under BackdoorSSL). Then, you could run the following script to pre-train image encoders on CIFAR10 and STL10: 
 
 ```
-python3 scripts/run_pretraining_encoder
+python3 scripts/run_pretraining_encoder.py
 ```
 
 ## BadEncoder
 
 The file badencoder.py implements our BadEncoder. 
 
-You can use the following script to finetune a backdoored image encoder, where the pre-training dataset is CIFAR10, shadow dataset is CIFAR10, and the reference inputs are images of a truck, digit one, and priority traffic sign:
+You can use the following example script to embed a backdoor to an image encoder, where the shadow dataset is CIFAR10 and the reference inputs are images of a truck, digit one, and priority traffic sign:
 
 ```
 python3 scripts/run_badencoder.py
@@ -52,7 +52,7 @@ python3 scripts/run_clip_training_downstream_classifier_zero_shot.py
 ```
 
 ## Experimental results
-You can first download the data, pre-trained image encoders, and backdoored image encoders used in our experiments from this link [encoders]() (put them in BackdoorSSL folder), and then run the above scripts to get the experimental results. The following tables show the results (please refer to log/ folder for details), where CA refers to clean accuracy, BA refers to backdoored accuracy, and ASR refers to attack success rate.
+You can first download the data, pre-trained image encoders, and backdoored image encoders used in our experiments from this link [encoders](https://drive.google.com/drive/folders/1acJr1fP2paK6pNq2bL6lzPTccv6nSzX6?usp=sharing) (put them in BackdoorSSL folder), and then run the above scripts to get the experimental results. The following tables show the results (please refer to log/ folder for details), where CA refers to clean accuracy, BA refers to backdoored accuracy, and ASR refers to attack success rate.
 
 This table shows the experimental results when the pre-training dataset is CIFAR10 and the target downstream tasks are GTSRB, SVHN, and STL10:
 
@@ -62,7 +62,7 @@ This table shows the experimental results when the pre-training dataset is CIFAR
 |      CIFAR10 | SVHN      | SVHN  |    58.50 |         69.32 |          99.14 |          
 |      CIFAR10 | STL10      | STL10 |    76.14   |         76.18 |          99.73 |                
 
-This table shows the results when applying BadEncoder to [image encoder pre-trained on ImageNet](https://github.com/google-research/simclr) and [CLIP's image encoder](https://github.com/openai/CLIP) (note that we obtain them from these two public GitHub repositories and, for convenience, we also put them in [encoders]()):
+This table shows the results when applying BadEncoder to [image encoder pre-trained on ImageNet](https://github.com/google-research/simclr) and [CLIP's image encoder](https://github.com/openai/CLIP) (note that we obtain them from these two public GitHub repositories and, for convenience, we also put them in [encoders](https://drive.google.com/drive/folders/1acJr1fP2paK6pNq2bL6lzPTccv6nSzX6?usp=sharing)):
 
 | Pre-training<br>dataset | Target downs-<br>tream dataset  | Downstream<br>dataset  | CA (%)    |   BA (%) |   ASR (%) |   
 |:--------:|:--------:|:------:|:--------:|:-------------:|:--------------:|      
