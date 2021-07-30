@@ -85,3 +85,16 @@ We refer to the following code in our implementation:
 https://github.com/google-research/simclr,
 https://github.com/openai/CLIP,
 https://github.com/leftthomas/SimCLR
+
+## Citation
+
+If you use this code, please cite the following paper:
+```
+@inproceedings{jia2022badencoder,
+  title={{BadEncoder}: Backdoor Attacks to Pre-trained Encoders in Self-Supervised Learning},
+  author={Jinyuan Jia and Yupei Liu and Neil Zhenqiang Gong},
+  booktitle={IEEE Symposium on Security and Privacy},
+  year={2022}
+}
+```
+
