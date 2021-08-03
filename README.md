@@ -1,7 +1,7 @@
-# BadEncoder
+# [BadEncoder](https://arxiv.org/pdf/2108.00352.pdf)
 
 
-This repository contains the code of BadEncoder, which injects backdoors into a pre-trained image encoder such that the downstream classifiers built based on the backdoored image encoder for different downstream tasks simultaneously inherit the backdoor behavior. Here is an overview of our BadEncoder: 
+This repository contains the code of [BadEncoder](https://arxiv.org/pdf/2108.00352.pdf), which injects backdoors into a pre-trained image encoder such that the downstream classifiers built based on the backdoored image encoder for different downstream tasks simultaneously inherit the backdoor behavior. Here is an overview of our BadEncoder: 
 
 
 
@@ -11,7 +11,7 @@ This repository contains the code of BadEncoder, which injects backdoors into a 
 
 ## Citation
 
-If you use this code, please cite the following paper:
+If you use this code, please cite the following [paper](https://arxiv.org/pdf/2108.00352.pdf):
 ```
 @inproceedings{jia2022badencoder,
   title={{BadEncoder}: Backdoor Attacks to Pre-trained Encoders in Self-Supervised Learning},
